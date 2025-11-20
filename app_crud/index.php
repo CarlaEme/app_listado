@@ -1,10 +1,19 @@
 <?php
-// Incluir el archivo de conexión
+// Incluir el archivo de conexión (que ahora devuelve un objeto PDO en $conn)
 include 'config.php';
 
 // Consulta para obtener todos los registros
 $sql = "SELECT id, nombre, email, telefono FROM usuarios";
+
+// CAMBIO 1: Ejecutar la consulta con $conn->query() (igual que mysqli, devuelve un PDOStatement)
 $resultado = $conn->query($sql);
+
+// CAMBIO 2: Obtener todos los resultados en un array asociativo.
+// Esto es más robusto en PDO para contar las filas.
+$usuarios = $resultado->fetchAll(PDO::FETCH_ASSOC);
+
+// Liberar el resultado de la consulta (buena práctica)
+$resultado = null; 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -33,20 +42,19 @@ $resultado = $conn->query($sql);
             </thead>
             <tbody>
                 <?php
-                if ($resultado->num_rows > 0) {
-                    // Iterar sobre cada fila de resultados
-                    while($row = $resultado->fetch_assoc()) {
+                // CAMBIO 3: Usar count() en el array $usuarios para verificar si hay registros.
+                if (count($usuarios) > 0) {
+                    // CAMBIO 4: Iterar sobre el array $usuarios usando foreach (más idiomático en PDO/PHP)
+                    foreach($usuarios as $row) {
                         echo "<tr>";
                         echo "<td>" . $row["id"] . "</td>";
                         echo "<td>" . htmlspecialchars($row["nombre"]) . "</td>";
                         echo "<td>" . htmlspecialchars($row["email"]) . "</td>";
                         echo "<td>" . htmlspecialchars($row["telefono"]) . "</td>";
                         echo "<td>";
-                        // **NUEVO ENLACE para Ver**
+                        // Enlaces
                         echo "<a href='ver.php?id=" . $row["id"] . "' class='btn btn-info btn-sm me-2'>Ver</a>";
-                        // Enlace para Editar (Consulta Individual implícita y preparación para Edición)
                         echo "<a href='editar.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm me-2'>Editar</a>";
-                        // Enlace para Eliminar
                         echo "<a href='eliminar.php?id=" . $row["id"] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"¿Estás seguro de eliminar este registro?\")'>Eliminar</a>";
                         echo "</td>";
                         echo "</tr>";
@@ -63,6 +71,6 @@ $resultado = $conn->query($sql);
 </body>
 </html>
 <?php
-// Cerrar conexión
-$conn->close();
+// CAMBIO 5: Cerrar conexión PDO (estableciendo la variable a null)
+$conn = null;
 ?>

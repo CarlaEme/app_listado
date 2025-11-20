@@ -5,23 +5,42 @@ $mensaje = "";
 
 // Verificar si el formulario se ha enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // 1. Obtener y limpiar los datos del formulario (Usar sentencias preparadas es mejor, pero aquí usamos un escape simple)
-    $nombre = $conn->real_escape_string($_POST['nombre']);
-    $email = $conn->real_escape_string($_POST['email']);
-    $telefono = $conn->real_escape_string($_POST['telefono']);
+    
+    // 1. Obtener los datos del formulario (sin necesidad de real_escape_string)
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $telefono = $_POST['telefono']; // Puede estar vacío
 
-    // 2. Consulta de Inserción
-    $sql = "INSERT INTO usuarios (nombre, email, telefono) VALUES ('$nombre', '$email', '$telefono')";
+    // 2. Consulta de Inserción con Marcadores de Posición (?)
+    // CAMBIO 1: Usamos '?' en lugar de concatenar las variables directamente.
+    $sql = "INSERT INTO usuarios (nombre, email, telefono) VALUES (?, ?, ?)";
 
-    if ($conn->query($sql) === TRUE) {
-        // Redirigir a la página principal después de la inserción exitosa
-        header("Location: index.php?status=added");
-        exit();
-    } else {
-        $mensaje = "<div class='alert alert-danger'>Error al agregar el usuario: " . $conn->error . "</div>";
+    try {
+        // CAMBIO 2: Preparar la sentencia
+        $stmt = $conn->prepare($sql);
+        
+        // CAMBIO 3: Ejecutar la sentencia, pasando los valores como un array.
+        // PDO bindea y sanea automáticamente los valores.
+        $stmt->execute([$nombre, $email, $telefono]);
+        
+        // Verificar si se insertó alguna fila (PDO devuelve 1 si fue exitoso)
+        if ($stmt->rowCount() > 0) { 
+            // Redirigir a la página principal después de la inserción exitosa
+            header("Location: index.php?status=added");
+            exit();
+        } else {
+             $mensaje = "<div class='alert alert-danger'>Error al agregar el usuario. No se insertó ninguna fila.</div>";
+        }
+
+    } catch (PDOException $e) {
+        // CAMBIO 4: Manejar errores de la base de datos (ej. email duplicado)
+        // PostgreSQL arrojará un error si el email es UNIQUE y se duplica.
+        $mensaje = "<div class='alert alert-danger'>Error al agregar el usuario: " . $e->getMessage() . "</div>";
     }
 }
-$conn->close();
+
+// CAMBIO 5: Cerrar la conexión PDO
+$conn = null;
 ?>
 
 <!DOCTYPE html>

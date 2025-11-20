@@ -3,26 +3,43 @@ include 'config.php';
 
 // 1. Verificar que se haya pasado un ID
 if (!isset($_GET['id']) || empty($_GET['id'])) {
-    // Si no hay ID, redirigir a la lista principal
     header("Location: index.php");
     exit();
 }
 
-$id = $conn->real_escape_string($_GET['id']);
-$usuario = null;
+// 2. Preparar la consulta con un marcador de posición (?)
+// CAMBIO 1: Eliminamos la necesidad de $conn->real_escape_string()
+// y usamos un marcador de posición para la seguridad.
+$sql_select = "SELECT id, nombre, email, telefono FROM usuarios WHERE id = ?";
 
-// 2. Consulta Individual
-$sql_select = "SELECT id, nombre, email, telefono FROM usuarios WHERE id=$id";
-$resultado = $conn->query($sql_select);
+try {
+    // Preparar la sentencia
+    $stmt = $conn->prepare($sql_select);
+    
+    // Ejecutar la sentencia, pasando el ID como un array.
+    // PDO se encarga de sanear y bindear (atar) el valor de forma segura.
+    $stmt->execute([$_GET['id']]);
+    
+    // Obtener el resultado
+    $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-if ($resultado->num_rows == 1) {
-    $usuario = $resultado->fetch_assoc();
-} else {
-    // Si el ID no existe
-    $error_msg = "El registro con ID $id no fue encontrado.";
+    if ($usuario) {
+        // El usuario fue encontrado (fetch devuelve el array)
+    } else {
+        // Si fetch devuelve false (o null), el registro no existe
+        $error_msg = "El registro con ID " . htmlspecialchars($_GET['id']) . " no fue encontrado.";
+    }
+
+} catch (PDOException $e) {
+    // Manejo de errores de la base de datos
+    $error_msg = "Error de base de datos: " . $e->getMessage();
 }
 
-$conn->close();
+// CAMBIO 2: Liberar la sentencia preparada
+$stmt = null; 
+
+// CAMBIO 3: Cerrar la conexión PDO
+$conn = null;
 ?>
 
 <!DOCTYPE html>

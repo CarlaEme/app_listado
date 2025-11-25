@@ -104,10 +104,9 @@ $resultado = null;
         Ver Empleados en Nómina 
         </a>
 
-<div class="col-md-4 mb-3">
+    <div class="col-md-4">
                     <h5 class="text-white text-center">Conceptualización de Servicios en la Nube</h5>
-                    <p class="text-muted texte-center text-white small">
-                       2025 Carla Judith Meza Ronquillo
+                    <p class="text-white text-center">Carla Judith Meza Ronquillo @2025
                     </p>
                 </div>
             </div>

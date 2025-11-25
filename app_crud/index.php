@@ -67,48 +67,45 @@ $resultado = null;
             </tbody>
         </table>
 
+
 </table>
-    </div>
+  </div>
     
     <div class="container mt-5 mb-5">
         <hr>
-        <h2 class="mb-4 text-center">Videos Relacionados</h2>
-        <div class="row">
+        <h2 class="mb-4 text-center">Enlaces</h2>
+        <div class="list-group">
             
-            <div class="col-md-4 mb-4">
-                <div class="ratio ratio-16x9">
-                    
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2M5NziF3Jc0?si=9Ua7JX3m-4g8Xa4H" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>             
-                </div>
-            </div>
+            <a 
+                href="https://youtu.be/GHBhBkJjWD4?si=wESBAg9i0TAo7iZs" 
+                class="list-group-item list-group-item-action" 
+                target="_blank"
+                rel="noopener noreferrer">
+                Ver Video 1: Recursos Humanos
+            </a>
 
-            <div class="col-md-4 mb-4">
-                <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z5UZAKjJ6Io?si=debjAefhj1lScAeP" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
+            <a 
+                href="URL_https://youtu.be/AcSI9FsUW4A?si=2x-VRlq5_3CSWnz4" 
+                class="list-group-item list-group-item-action" 
+                target="_blank"
+                rel="noopener noreferrer">
+                Ver Video 2: Funciones de RH
+            </a>
             
-            <div class="col-md-4 mb-4">
-                <div class="ratio ratio-16x9">
-                 <iframe width="560" height="315" src="https://www.youtube.com/embed/GHBhBkJjWD4?si=0CXwDQN8vvYyPDHN" title="YouTube video player"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
-
-                </div>
-            </div>
+           <a 
+        href="https://docs.google.com/spreadsheets/d/11_z-0YAeTDF1YjLQBBcgDDZLGbNbeN4GoNCs9c66JSI/edit?usp=sharing" 
+        class="list-group-item list-group-item-action list-group-item-info" 
+        target="_blank"
+        rel="noopener noreferrer">
+    Ver Empleados en Nómina 
+</a>
             
         </div>
     </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+         
 <?php
 // CAMBIO 5: Cerrar conexión PDO (estableciendo la variable a null)
 $conn = null;

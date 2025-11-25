@@ -85,7 +85,7 @@ $resultado = null;
             </a>
 
             <a 
-                href="URL_https://youtu.be/AcSI9FsUW4A?si=2x-VRlq5_3CSWnz4" 
+                href="https://youtu.be/AcSI9FsUW4A?si=EemR-8fUhhNjNhaU" 
                 class="list-group-item list-group-item-action" 
                 target="_blank"
                 rel="noopener noreferrer">
@@ -97,12 +97,24 @@ $resultado = null;
         class="list-group-item list-group-item-action list-group-item-info" 
         target="_blank"
         rel="noopener noreferrer">
-    Ver Empleados en Nómina 
-</a>
+        Ver Empleados en Nómina 
+        </a>
+
+<div class="col-md-4 mb-3">
+                    <h5 class="text-warning">Conceptualización de Servicios en la Nube</h5>
+                    <p class="text-muted small">
+                       2025 Carla Judith Meza Ronquillo
+                    </p>
+                </div>
+            </div>
+
+
             
         </div>
     </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
          

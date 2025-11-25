@@ -71,11 +71,11 @@ $resultado = null;
 </table>
   </div>
 
-  <footer class="bg-dark text-white mt-5 p-4">
+  <footer class="bg-dark text-white mt-3 py-3">
         <div class="container">
             <div class="row">
     
-    <div class="container mt-5 mb-5">
+    <div class="container mt-3 mb-5">
         <hr>
         <h2 class="mb-4 text-center">Enlaces</h2>
         <div class="list-group">
@@ -105,8 +105,8 @@ $resultado = null;
         </a>
 
 <div class="col-md-4 mb-3">
-                    <h5 class="text-warning">Conceptualización de Servicios en la Nube</h5>
-                    <p class="text-muted small">
+                    <h5 class="text-white text-center">Conceptualización de Servicios en la Nube</h5>
+                    <p class="text-muted texte-center text-white small">
                        2025 Carla Judith Meza Ronquillo
                     </p>
                 </div>

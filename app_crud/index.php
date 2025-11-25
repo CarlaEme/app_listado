@@ -24,7 +24,8 @@ $resultado = null;
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="mb-4 text-center">Gestión de Usuarios</h1>
+        <h1 class="mb-4 text-center">Gestión de Empleados</h1>
+        <h2>Dirección de Recursos Humanos</h2>
         
         <a href="agregar.php" class="btn btn-primary mb-3">
             <i class="fas fa-plus-circle"></i> Agregar Nuevo Usuario

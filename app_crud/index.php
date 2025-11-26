@@ -108,8 +108,8 @@ $resultado = null;
         </a>
 
         <div class="col-12 mt-3">
-         <p class="text-white text-center mb-3">Conceptualización de Servicios en la Nube</p>
-         <p class="text-white text-center">Carla Judith Meza Ronquillo @2025</p>
+         <p class="text-white text-center mb-3">Conceptualización de Servicios en la Nube/Carla Judith Meza Ronquillo</p>
+         
  </div>
 
               

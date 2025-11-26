@@ -75,7 +75,7 @@ $resultado = null;
         <div class="container">
             <div class="row">
     
-    <div class="container mt-3 mb-5">
+    <div class="container mt-5 mb-5">
         <hr>
         <h2 class="mb-4 text-center">Enlaces</h2>
         <div class="list-group">
@@ -97,11 +97,11 @@ $resultado = null;
             </a>
             
            <a 
-        href="https://docs.google.com/spreadsheets/d/11_z-0YAeTDF1YjLQBBcgDDZLGbNbeN4GoNCs9c66JSI/edit?usp=sharing" 
-        class="list-group-item list-group-item-action list-group-item-info" 
-        target="_blank"
-        rel="noopener noreferrer">
-        Ver Empleados en Nómina 
+             href="https://docs.google.com/spreadsheets/d/11_z-0YAeTDF1YjLQBBcgDDZLGbNbeN4GoNCs9c66JSI/edit?usp=sharing" 
+             class="list-group-item list-group-item-action list-group-item-info" 
+             target="_blank"
+             rel="noopener noreferrer">
+             Ver Empleados en Nómina 
         </a>
 
         <div class="col-12 mb-3">

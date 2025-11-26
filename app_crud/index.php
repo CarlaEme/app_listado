@@ -71,7 +71,7 @@ $resultado = null;
 </table>
   </div>
 
-  <footer class="bg-dark text-white mt-3 py-3">
+  <footer class="bg-dark text-white mt-2 py-2">
         <div class="container">
             <div class="row">
     
@@ -105,10 +105,10 @@ $resultado = null;
         </a>
 
         <div class="col-12 mb-3">
-                    <h5 class="text-white text-center">Conceptualización de Servicios en la Nube</h5>
-                    <p class="text-white text-center">Carla Judith Meza Ronquillo @2025
-                    </p>
-                </div>
+    <h5 class="text-white text-center">Conceptualización de Servicios en la Nube</h5>
+     <p class="text-white text-center">Carla Judith Meza Ronquillo @2025
+ </p>
+ </div>
 
               
         </div>

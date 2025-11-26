@@ -55,7 +55,7 @@ $resultado = null;
                         echo "<td>";
                         // Enlaces
                         echo "<a href='ver.php?id=" . $row["id"] . "' class='btn btn-info btn-sm me-2'>Ver</a>";
-                        echo "<a href='editar.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm me-2'>Editar</a>";
+                        echo "<a href='editar.php?id=" . $row["id"] . "' class='btn btn-success btn-sm me-2'>Editar</a>";
                         echo "<a href='eliminar.php?id=" . $row["id"] . "' class='btn btn-danger btn-sm' onclick='return confirm(\"¿Estás seguro de eliminar este registro?\")'>Eliminar</a>";
                         echo "</td>";
                         echo "</tr>";
@@ -71,7 +71,7 @@ $resultado = null;
 </table>
   </div>
 
-  <footer class="bg-dark text-white mt-2 py-2">
+  <footer class="bg-dark text-white mt-3 py-2">
         <div class="container">
             <div class="row">
     
@@ -105,9 +105,8 @@ $resultado = null;
         </a>
 
         <div class="col-12 mb-3">
-    <h5 class="text-white text-center">Conceptualización de Servicios en la Nube</h5>
-     <p class="text-white text-center">Carla Judith Meza Ronquillo @2025
- </p>
+         <p class="text-white text-center">Conceptualización de Servicios en la Nube</p>
+         <p class="text-white text-center">Carla Judith Meza Ronquillo @2025</p>
  </div>
 
               

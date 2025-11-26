@@ -71,7 +71,7 @@ $resultado = null;
 </table>
   </div>
 
-  <footer class="bg-dark text-white mt-3 py-1">
+  <footer class="bg-dark text-white mt-3 py-0.5">
        <div class="container mt-5 mb-5">
     <hr>
     
@@ -104,7 +104,7 @@ $resultado = null;
              class="list-group-item list-group-item-action list-group-item-info" 
              target="_blank"
              rel="noopener noreferrer">
-             Ver Empleados en Nómina 
+             Ver archivo "Empleados en Nómina" 
         </a>
 
         <div class="col-12 mt-3">

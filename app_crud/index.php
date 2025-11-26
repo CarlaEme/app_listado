@@ -71,7 +71,7 @@ $resultado = null;
 </table>
   </div>
 
-  <footer class="bg-dark text-white mt-3 py-2">
+  <footer class="bg-dark text-white mt-3 py-1">
        <div class="container mt-5 mb-5">
     <hr>
     

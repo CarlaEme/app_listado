@@ -100,7 +100,7 @@ $resultado = null;
             </a>
             
            <a 
-             href="https://docs.google.com/spreadsheets/d/11_z-0YAeTDF1YjLQBBcgDDZLGbNbeN4GoNCs9c66JSI/edit?usp=sharing" 
+             href="https://docs.google.com/spreadsheets/d/11_z-0YAeTDF1YjLQBBcgDDZLGbNbeN4GoNCs9c66JSI/view" 
              class="list-group-item list-group-item-action list-group-item-info" 
              target="_blank"
              rel="noopener noreferrer">

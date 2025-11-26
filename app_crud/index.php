@@ -72,12 +72,15 @@ $resultado = null;
   </div>
 
   <footer class="bg-dark text-white mt-3 py-2">
-        <div class="container">
-            <div class="row">
+       <div class="container mt-5 mb-5">
+    <hr>
     
-    <div class="container mt-5 mb-5">
-        <hr>
-        <h2 class="mb-4 text-center">Enlaces</h2>
+    <div class="row justify-content-center">
+        
+        <div class="col-md-8 mx-auto"> 
+            
+            <h2 class="mb-4 text-center">Enlaces</h2>
+
         <div class="list-group">
             
             <a 
@@ -105,7 +108,7 @@ $resultado = null;
         </a>
 
         <div class="col-12 mb-3">
-         <p class="text-white text-center mb-1">Conceptualización de Servicios en la Nube</p>
+         <p class="text-white text-center mb-3">Conceptualización de Servicios en la Nube</p>
          <p class="text-white text-center">Carla Judith Meza Ronquillo @2025</p>
  </div>
 

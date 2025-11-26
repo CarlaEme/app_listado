@@ -77,7 +77,7 @@ $resultado = null;
     
     <div class="row justify-content-center">
         
-        <div class="col-md-8 mx-auto"> 
+        <div class="col-md-6 mx-auto"> 
             
             <h2 class="mb-4 text-center">Enlaces</h2>
 
@@ -107,7 +107,7 @@ $resultado = null;
              Ver Empleados en Nómina 
         </a>
 
-        <div class="col-12 mb-3">
+        <div class="col-12 mt-3">
          <p class="text-white text-center mb-3">Conceptualización de Servicios en la Nube</p>
          <p class="text-white text-center">Carla Judith Meza Ronquillo @2025</p>
  </div>
